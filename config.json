@@ -1,0 +1,24 @@
+{
+  "api_key": "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",
+  "wework_conversation_size": 2000,
+  "port": "81",
+  "type": "wechat_mp",
+  "wechat_app": {
+    "enable": true,
+    "wechat_url": {
+      "token": "pmyLLBsozFq3DY",
+      "corpid": "wwc5ce805963042a86",
+      "encoding_aeskey": "Q9fu934KJ1163aaLTDFHGP8R5jnTfzksTbofK9INtje",
+      "corpsecret": "aCjx7A269iJUy8RyfIBPrdKuCrhSd0scz4p0w1OpWIY"
+    }
+  },
+  "wechat_mp": {
+    "enable": true,
+    "wechat_url": {
+      "token": "zhanghaogongzhonghao",
+      "corpid": "wwc5ce805963042a86",
+      "encoding_aeskey": "PbL1X0R0CUoV3oENa5C8WcaeM3yZJks7UP0C2KAqJuX",
+      "corpsecret": "aCjx7A269iJUy8RyfIBPrdKuCrhSd0scz4p0w1OpWIY"
+    }
+  }
+}
