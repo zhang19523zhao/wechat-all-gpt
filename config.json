@@ -1,8 +1,15 @@
 {
-  "api_key": "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",
+  "key_type": "chatgpt",
+  "api_key": "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",
+  "chatgpt_key": "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",
+  "azure": {
+    "apiUrl": "https://jtazure-openai-test-001.openai.azure.com/",
+    "apiKey": "5eb19754167e4c3aa5cae1e40eb98b44",
+    "deployment_name": "azure-gpt35"
+  },
   "wework_conversation_size": 2000,
   "port": "81",
-  "type": "wechat_mp",
+  "type": "wechat_app",
   "wechat_app": {
     "enable": true,
     "wechat_url": {
@@ -19,6 +26,7 @@
       "corpid": "wwc5ce805963042a86",
       "encoding_aeskey": "PbL1X0R0CUoV3oENa5C8WcaeM3yZJks7UP0C2KAqJuX",
       "corpsecret": "aCjx7A269iJUy8RyfIBPrdKuCrhSd0scz4p0w1OpWIY"
-    }
+    },
+    "limit": 10
   }
 }

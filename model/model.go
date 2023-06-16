@@ -1,5 +1,7 @@
 package model
 
+import "encoding/xml"
+
 // WechatApp  企业微信应用
 type WechatApp struct {
 	Enable    bool      `json:"enable"`
@@ -10,6 +12,7 @@ type WechatApp struct {
 type WechatMp struct {
 	Enable    bool      `json:"enable"`
 	WechatUrl WechatUrl `json:"wechat_url"`
+	Limit     int       `json:"limit"`
 }
 
 type WechatUrl struct {
@@ -61,6 +64,27 @@ type UploadTmpResp struct {
 	Type      string `json:"type"`
 	MediaId   string `json:"media_id"`
 	CreatedAt string `json:"created_at"`
+}
+
+// WeixinMapAskMsg 微信公众号用户消息
+type WeixinMapAskMsg struct {
+	ToUserName   string `xml:"ToUserName"`
+	FromUserName string `xml:"FromUserName"`
+	CreateTime   string `xml:"CreateTime"`
+	MsgType      string `xml:"MsgType"`
+	Content      string `xml:"Content"`
+	MsgId        string `xml:"MsgId"`
+	MsgDataId    string `xml:"MsgDataId"`
+	Idx          string `xml:"Idx"`
+}
+
+type ReplyMp struct {
+	ToUserName   string   `xml:"ToUserName"`
+	FromUserName string   `xml:"FromUserName"`
+	CreateTime   int      `xml:"CreateTime"`
+	MsgType      string   `xml:"MsgType"`
+	Content      string   `xml:"Content"`
+	XMLName      xml.Name `xml:"xml"`
 }
 
 // ReplyAll 包含所有返回类型

@@ -67,7 +67,7 @@ func (*ChatGpt) AskGpt(question, conversationId, tp string, contentSize int) (st
 
 	answer, err := chat.Chat(messages)
 	if err != nil {
-		return "", err
+		return "机器人太累了请稍后重试!", err
 	}
 	return answer, nil
 }
@@ -79,6 +79,8 @@ func (c *ChatGpt) Chat(messages []gogpt.ChatCompletionMessage) (string, error) {
 		Model:    gogpt.GPT3Dot5Turbo,
 		Messages: messages,
 	}
+
+	fmt.Printf("Messages:%v\n", messages)
 	resp, err := c.client.CreateChatCompletion(c.ctx, req)
 	if err != nil {
 		logger.Error(fmt.Sprintf("CreateChatCompletion: %v\n", err))
